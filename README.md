@@ -12,6 +12,7 @@ Platforms
 --------
 
 * Ubuntu
+* Debian
 
 License and Author
 ==================
