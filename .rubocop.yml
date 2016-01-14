@@ -5,6 +5,10 @@ AllCops:
     - test/**/*
     - files/**/*
     - .kitchen/**/*
+    - Berksfile
+    - Berksfile.lock
+    - Vagrantfile
+    - Gemfile
 
 AlignParameters:
   Enabled: false
