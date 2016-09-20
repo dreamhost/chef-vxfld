@@ -9,10 +9,10 @@ version '0.1.10'
 recipe 'vxsnd', ''
 recipe 'vxrd', ''
 
-%w( ubuntu debian ).each do |os|
+%w(ubuntu debian).each do |os|
   supports os
 end
 
-%w( apt ).each do |dep|
+%w(apt).each do |dep|
   depends dep
 end
