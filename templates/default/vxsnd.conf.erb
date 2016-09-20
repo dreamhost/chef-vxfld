@@ -40,7 +40,11 @@ svcnode_peers = <%= node["vxfld"]["vxsnd"]["peers"] %>
 # When set to true, the service node will listen for vxlan data traffic
 # Note: Use 1, yes, true, or on, for True and 0, no, false, or off,
 # for False
-enable_vxlan_listen = true
+enable_vxlan_listen = <%= node["vxfld"]["vxsnd"]["enable_vxlan_listen"] %>
+
+<% if not node["vxfld"]["vxsnd"]["no_flood"].nil? %>
+no_flood = <%= node["vxfld"]["vxsnd"]["no_flood"] %>
+<% end %>
 
 # When set to true, the svcnode_ip will be installed on the loopback
 # interface, and it will be withdrawn when the vxsnd is no longer in
