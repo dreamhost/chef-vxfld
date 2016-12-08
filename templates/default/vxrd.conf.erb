@@ -27,18 +27,18 @@ svcnode_ip = <%= node['vxfld']['vxrd']['svcnode_ip'] %>
 # Holdtime (in seconds) for soft state. It's how long the service node waits
 # before ageing out an IP address for a VNI. vxrd includes this in the register
 # msgs it sends to a vxsnd
-#holdtime = 90
+holdtime = <%= node["vxfld"]["vxrd"]["holdtime"] %>
 
 # Local IP address to bind to for receiving control traffic from the snd
-src_ip =  <%= node["vxfld"]["vxrd"]["src_ip"] %>
+src_ip = <%= node["vxfld"]["vxrd"]["src_ip"] %>
 
 [vxrd]
 # Number of times to refresh within the hold time. The higher this number
 # the more lost UDP refresh messages can be tolerated
-#refresh_rate = 3
+refresh_rate = <%= node["vxfld"]["vxrd"]["refresh_rate"] %>
 
 # Seconds to poll the system for current VXLAN membership
-#config_check_rate = 5
+config_check_rate = <%= node["vxfld"]["vxrd"]["config_check_rate"] %>
 
 # Enable self replication
 # Note: Use true, or on, for True and 0, no, false, or off,
