@@ -33,6 +33,8 @@ logdest = stdout
 # Local IP address to bind to for receiving inter-vxsnd control traffic
 src_ip = <%= node["vxfld"]["vxsnd"]["src_ip"] %>
 
+max_packet_size = <%= node["vxfld"]["vxsnd"]["max_packet_size"] %>
+
 [vxsnd]
 # Space separated list of IP addresses of vxsnd to share state with
 svcnode_peers = <%= node["vxfld"]["vxsnd"]["peers"] %>
