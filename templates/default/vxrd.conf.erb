@@ -32,6 +32,8 @@ holdtime = <%= node["vxfld"]["vxrd"]["holdtime"] %>
 # Local IP address to bind to for receiving control traffic from the snd
 src_ip = <%= node["vxfld"]["vxrd"]["src_ip"] %>
 
+max_packet_size = <%= node["vxfld"]["vxrd"]["max_packet_size"] %>
+
 [vxrd]
 # Number of times to refresh within the hold time. The higher this number
 # the more lost UDP refresh messages can be tolerated
